@@ -52,14 +52,37 @@ body{
     padding: 0 10%;
 }
 
+.home-image{
+    flex-direction: right;
+    max-width: 30%;
+    
+
+}
+
+.img-sec{
+    width: 100%;
+    border:2px solid #081b29;
+    border-radius: 50%;
+    opacity: 0.5;
+    height: 300px;
+}
+
+
+.img-sec:hover{
+   opacity:1;
+}
+
 .home-content{
-    max-width: 670px;
+    max-width:70%;
+    margin-right: 20px;
+    /*max-width: 670px;*/
 }
 
 .home-content h1{
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    margin-left: 0;
 }
 
 .home-content h3{
@@ -82,7 +105,7 @@ body{
     
 }
 
-.btn-box a{
+.btn-box a {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -97,6 +120,13 @@ body{
     text-decoration : none;
     font-weight: none;
     letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
 }
 
 .btn-box a:nth-child(2) {
@@ -104,6 +134,37 @@ body{
     color: #00abf0;  
 }
 
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+
+.btn-box a::before {
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width:100%;
+}
+
+.social-link{
+
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+    
+}
 .home-sci{
     position: absolute;
     bottom: 40px;
